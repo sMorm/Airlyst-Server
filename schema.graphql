@@ -1,0 +1,35 @@
+type Query {
+  user(username: String!): User!
+  "Returns a boolean value of whether a username or email exists"
+  userExists(username: String, email: String): Boolean!
+  login(username: String!, password: String!): Token!
+}
+
+type Mutation {
+  signup(
+    firstName: String!,
+    lastName: String!,
+    email: String!,
+    username: String!,
+    password: String!
+  ): Token
+  deactivateUser(id: Int!): Boolean
+}
+"""A type that's returned after a successful signup or login"""
+type Token {
+  user: User,
+  token: String!
+}
+
+"""A type to represent a user's information"""
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  email: String!
+  created_at: String!
+  profilePicture: String
+  bio: String
+  username: String!
+  createdAt: String!
+}

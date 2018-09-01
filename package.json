@@ -1,0 +1,29 @@
+{
+  "name": "exposhare-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.0.5",
+    "bcrypt": "^3.0.0",
+    "dotenv": "^6.0.0",
+    "express-jwt": "^5.3.1",
+    "graphql": "^14.0.0",
+    "graphql-import": "^0.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "nodemon": "^1.18.4"
+  }
+}
